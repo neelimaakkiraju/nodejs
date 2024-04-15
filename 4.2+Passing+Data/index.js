@@ -11,7 +11,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
-
+    const numOfLetters = req.body["fName"].length + req.body["lName"].length;
+    res.render("index.ejs" , { totalLetters: numOfLetters } )
   
 });
 
